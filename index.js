@@ -12,7 +12,7 @@ module.exports = function (homebridge) {
 
 // This seems to be the "id" of the official LiftMaster iOS app
 var APP_ID = "JVM/G9Nwih5BwKgNCjLxiFUQxQijAebyyg8QUHr7JOrP+tuPb8iHfRHKwTmDzHOu";
-var UA_ID = "myQ/14041 CFNetwork/1107.1 Darwin/19.0.0";
+var UA_ID = "myQ/19569 CFNetwork/1107.1 Darwin/19.0.0";
 
 // Headers needed for validation
 var HEADERS = {
@@ -27,7 +27,7 @@ var HEADERS = {
 function MyQ2Platform(log, config, api) {
   this.log = log;
   this.config = config || {"platform": "MyQ2"};
-  this.verbose = this.config.verbose === true;
+  this.verbose = this.config.verbose || false;
   this.email = this.config.email;
   this.password = this.config.password;
   this.gateways = Array.isArray(this.config.gateways) ? this.config.gateways : [];
@@ -46,7 +46,7 @@ function MyQ2Platform(log, config, api) {
   if(this.config.openers) this.gateways.push(this.config.openers);
   if(this.config.openers && Array.isArray(this.config.openers)) this.gateways = this.gateways.concat(this.config.openers);
 
-  this.accessories = {};
+  this.accessories = [];
 
   if(api) {
     this.api = api;
