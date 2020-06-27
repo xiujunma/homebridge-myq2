@@ -1,45 +1,12 @@
 {
-  "_from": "homebridge-myq2@latest",
-  "_id": "homebridge-myq2@1.2.23 beta",
-  "_inBundle": false,
-  "_integrity": "sha512-CetkdSsvet8NJjJRbqqK/64X4XhHxYwPZ/2zt2QIlxtb5gWMWDs1etdM3VAj0smsbom0MfTImw2DwofgeN4F2Q==",
-  "_location": "/homebridge-myq2",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "homebridge-myq2@latest",
-    "name": "homebridge-myq2",
-    "escapedName": "homebridge-myq2",
-    "rawSpec": "latest",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/homebridge-myq2/-/homebridge-myq2-1.2.22.tgz",
-  "_shasum": "a15cfda94581778287dcc84f040957e3850f1443",
-  "_spec": "homebridge-myq2@latest",
-  "_where": "/usr/local/lib",
-  "author": {
-    "name": "HJD"
-  },
-  "bugs": {
-    "url": "https://github.com/hjdhjd/homebridge-myq2/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "node-fetch": "^2.0.0"
-  },
-  "deprecated": false,
-  "description": "MyQ LiftMaster and Chamberlain plugin for Homebridge",
+  "name": "homebridge-myq2",
+  "version": "1.2.22",
   "displayName": "Homebridge MyQ",
-  "engines": {
-    "homebridge": ">=0.3.0",
-    "node": ">=0.12.0"
+  "description": "MyQ LiftMaster and Chamberlain plugin for Homebridge",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hjdhjd/homebridge-myq2.git"
   },
-  "homepage": "https://github.com/hjdhjd/homebridge-myq2#readme",
   "keywords": [
     "homebridge",
     "homebridge-plugin",
@@ -50,11 +17,17 @@
     "garage door",
     "garage door opener"
   ],
+  "author": "HJD",
   "license": "ISC",
-  "name": "homebridge-myq2",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hjdhjd/homebridge-myq2.git"
+  "bugs": {
+    "url": "https://github.com/hjdhjd/homebridge-myq2/issues"
   },
-  "version": "1.2.23 beta"
+  "homepage": "https://github.com/hjdhjd/homebridge-myq2#readme",
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.3.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.0.0"
+  }
 }
