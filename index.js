@@ -170,10 +170,10 @@ MyQ2Platform.prototype.statePolling = function (delay) {
   }
 
   // last login failed, delay next attempt
-   if (self.loginWaitInterval > 0) {
-     self.log.error(`Error logging into MyQ, delaying ${self.loginWaitInterval}s before retrying.`);
-     refresh = self.loginWaitInterval;
-   }
+  if (self.loginWaitInterval > 0) {
+    self.log.error(`Error logging into MyQ, delaying ${self.loginWaitInterval}s before retrying.`);
+    refresh = self.loginWaitInterval;
+  }
 
   // Setup periodic update with polling interval
   this.tout = setTimeout(function () {
@@ -225,7 +225,7 @@ MyQ2Platform.prototype.login = function (callback) {
     }
   }).catch(error => {
       self.log.error('Unable to login to MyQ, received error:', error); //update from @shamoon
-      self.loginWaitInterval = 2 * Math.max(self.shortPoll, self.loginWaitInterval);
+      this.loginWaitInterval = 2 * Math.max(self.shortPoll, self.loginWaitInterval);
       callback(error);
   });
 }
